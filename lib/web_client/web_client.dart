@@ -7,6 +7,5 @@ class AppWebClient {
   static const String _baseUrl = 'http://192.168.218.37:7272/';
   final Dio client = Dio(BaseOptions(baseUrl: _baseUrl));
 
-  final UserService userService;
-
+  //final UserService userService = ;
 }

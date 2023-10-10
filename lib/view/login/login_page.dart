@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget? loginButtonLabelWidget = const Text('Entrar');
 
-  final AppWebClient client = Get;
+  //final AppWebClient client = Get;
 
   @override
   Widget build(BuildContext context) {
@@ -95,16 +95,21 @@ class _LoginPageState extends State<LoginPage> {
                                 onPressed: () {
                                   var request = UserLoginRequest(
                                       email: email, password: password);
-                                  var response =
-                                      client.userService.loginUser(request);
-                                  response.then((value) => {
-                                        if(value is Success) {
-                                          Get.snackbar('Sucesso', 'Bem vindo ${request.email}'),
-                                          Get.toNamed('/test')
-                                        }else {
-                                          Get.snackbar('Erro', (value as Error).error)
-                                        }
-                                      });
+                                  // var response =
+                                  //     client.userService.loginUser(request);
+                                  // response.then((value) => {
+                                  //       if (value is Success)
+                                  //         {
+                                  //           Get.snackbar('Sucesso',
+                                  //               'Bem vindo ${request.email}'),
+                                  //           Get.toNamed('/test')
+                                  //         }
+                                  //       else
+                                  //         {
+                                  //           Get.snackbar(
+                                  //               'Erro', (value as Error).error)
+                                  //         }
+                                  //     });
                                 },
                                 child: loginButtonLabelWidget),
                           )),

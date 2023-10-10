@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_tests/view/login/login_page.dart';
+import 'package:login_tests/view/main_menu/main_menu.dart';
 import 'package:login_tests/view/test/test_page.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/',
-          page: () => const LoginPage(),
+          page: () => const MainMenu(),
           children: [
             GetPage(name: '/test', page: () => const TestPage()),
           ],
